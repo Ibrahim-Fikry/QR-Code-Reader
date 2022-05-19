@@ -21,15 +21,34 @@
     background-color: #0b85ff;
     border-radius: 7px;
     padding: 30px 30px 35px;
+    transition: height 0.2s ease;
+}
+
+.wrapper .active {
+    height: 525px;
+}
+
+.wrapper .active form {
+    height: 525px;
+    pointer-events: none;
 }
 
 .wrapper form {
     height: 210px;
     background: #fff;
-    cursor: pointer;
+    cursor: p;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: height 0.2s ease;
+}
+
+.wrapper .active form img {
+    display: block;
+}
+
+.wrapper .active form .content {
+    display: non;
 }
 
 form img {
@@ -55,6 +74,12 @@ form.content p {
     opacity: 0;
     pointer-events: none;
     margin-top: 25px;
+}
+
+.wrapper .active .details {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
 }
 
 .details textarea {
